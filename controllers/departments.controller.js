@@ -35,7 +35,7 @@ exports.getById = async (req, res) => {
 
 exports.addNew = async (req, res) => {
   try {
-    const { name } = req.body; 
+    const { name } = req.body;
     const newDepartment = new Department({ name: name });
     await newDepartment.save();
     res.json({ message: 'OK' });
